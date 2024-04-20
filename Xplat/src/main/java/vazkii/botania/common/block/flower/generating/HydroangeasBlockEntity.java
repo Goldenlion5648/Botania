@@ -17,8 +17,10 @@ import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 
+import org.joml.Math;
 import vazkii.botania.client.fx.WispParticleData;
 import vazkii.botania.common.block.BotaniaFlowerBlocks;
+import vazkii.botania.common.lib.BotaniaTags;
 
 public class HydroangeasBlockEntity extends FluidGeneratorBlockEntity {
 	public static final String TAG_PASSIVE_DECAY_TICKS = "passiveDecayTicks";
@@ -30,7 +32,7 @@ public class HydroangeasBlockEntity extends FluidGeneratorBlockEntity {
 	private int passiveDecayTicks;
 
 	public HydroangeasBlockEntity(BlockPos pos, BlockState state) {
-		super(BotaniaFlowerBlocks.HYDROANGEAS, pos, state, FluidTags.WATER, 40, 1);
+		super(BotaniaFlowerBlocks.HYDROANGEAS, pos, state, BotaniaTags.Fluids.HYDROANGEAS_FLUID, 40, 1);
 	}
 
 	@Override
