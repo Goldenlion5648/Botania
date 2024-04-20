@@ -10,8 +10,8 @@ package vazkii.botania.fabric.data;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.data.PackOutput;
-
 import vazkii.botania.data.*;
 import vazkii.botania.data.recipes.*;
 
@@ -40,6 +40,7 @@ public class FabricDatagenInitializer implements DataGeneratorEntrypoint {
 		pack.addProvider(EntityTagProvider::new);
 		pack.addProvider(BannerPatternTagsProvider::new);
 		pack.addProvider(BiomeTagProvider::new);
+		pack.addProvider(FluidTagProvider::new);
 		// pack.addProvider(DamageTypeTagProvider::new);
 		pack.addProvider((PackOutput output) -> new StonecuttingProvider(output));
 		pack.addProvider((PackOutput output) -> new CraftingRecipeProvider(output));
