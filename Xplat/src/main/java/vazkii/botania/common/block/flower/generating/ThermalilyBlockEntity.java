@@ -15,11 +15,9 @@ import net.minecraft.tags.FluidTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.state.BlockState;
 
-import org.joml.Math;
 import vazkii.botania.client.fx.WispParticleData;
 import vazkii.botania.common.block.BotaniaFlowerBlocks;
 import vazkii.botania.common.handler.BotaniaSounds;
-import vazkii.botania.common.lib.BotaniaTags;
 
 public class ThermalilyBlockEntity extends FluidGeneratorBlockEntity {
 	public static final int COOLDOWN_TICKS_MULTIPLER = 400;
@@ -38,7 +36,7 @@ public class ThermalilyBlockEntity extends FluidGeneratorBlockEntity {
 	}
 
 	public ThermalilyBlockEntity(BlockPos pos, BlockState state) {
-		super(BotaniaFlowerBlocks.THERMALILY, pos, state, BotaniaTags.Fluids.THERMALILY_FLUID, 600, 45);
+		super(BotaniaFlowerBlocks.THERMALILY, pos, state, FluidTags.LAVA, 600, 45);
 	}
 
 	@Override

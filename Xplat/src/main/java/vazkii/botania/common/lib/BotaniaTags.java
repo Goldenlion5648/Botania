@@ -17,7 +17,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BannerPattern;
-import net.minecraft.world.level.material.Fluid;
 
 import static vazkii.botania.common.lib.ResourceLocationHelper.prefix;
 
@@ -326,16 +325,6 @@ public class BotaniaTags {
 
 		private static TagKey<DamageType> tag(String name) {
 			return TagKey.create(Registries.DAMAGE_TYPE, prefix(name));
-		}
-	}
-
-	public static class Fluids {
-		public static final TagKey<Fluid> HYDROANGEAS_FLUID = tag("hydroangeas_fluid");
-		public static final TagKey<Fluid> THERMALILY_FLUID = tag("thermalily_fluid");
-
-
-		private static TagKey<Fluid> tag(String name) {
-			return TagKey.create(Registries.FLUID, prefix(name));
 		}
 	}
 }
