@@ -4,6 +4,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.TagsProvider;
+import net.minecraft.tags.BiomeTags;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.Fluids;
@@ -19,6 +20,9 @@ public class FluidTagProvider extends TagsProvider<Fluid> {
 
 	@Override
 	protected void addTags(HolderLookup.Provider provider) {
+		// hack to not get errors below
+		tag(FluidTags.WATER);
+		tag(FluidTags.LAVA);
 		this.tag(BotaniaTags.Fluids.HYDROANGEAS_FLUID).addTag(FluidTags.WATER);
 		this.tag(BotaniaTags.Fluids.THERMALILY_FLUID).addTag(FluidTags.LAVA);
 	}

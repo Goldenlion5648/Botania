@@ -76,7 +76,7 @@ public abstract class FluidGeneratorBlockEntity extends GeneratingFlowerBlockEnt
 					BlockState bstate = getLevel().getBlockState(pos);
 					FluidState fstate = getLevel().getFluidState(pos);
 					if (fstate.is(consumedFluid) && fstate.isSource()) {
-						if (consumedFluid != FluidTags.WATER) {
+						if (!fstate.is(FluidTags.WATER)) {
 							getLevel().setBlockAndUpdate(pos, Blocks.AIR.defaultBlockState());
 						} else {
 							int waterAround = 0;

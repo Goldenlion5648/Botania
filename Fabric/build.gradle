@@ -50,9 +50,10 @@ repositories {
         name = "Modmuss"
         url = "https://maven.modmuss50.me/"
     }
+
     maven {
-        name = "Jared"
-        url = "https://maven.blamejared.com/" // for JEI and Patchouli
+        url = 'https://maven.blamejared.com'
+        name = 'BlameJared Maven'
     }
     maven {
         name = "TerraformersMC"
@@ -135,6 +136,7 @@ dependencies {
     modCompileOnly 'teamreborn:energy:3.0.0'
 
     // modCompileOnly 'com.blamejared.crafttweaker:CraftTweaker-fabric-1.18.2:9.1.123'
+    modCompileOnly('com.blamejared.crafttweaker:CraftTweaker-fabric-1.20.1:14.0.38')
 
     modCompileOnly 'com.unascribed:ears-api:1.4.5'
 
