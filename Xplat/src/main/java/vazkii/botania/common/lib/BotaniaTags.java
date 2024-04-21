@@ -333,7 +333,6 @@ public class BotaniaTags {
 		public static final TagKey<Fluid> HYDROANGEAS_FLUID = tag("hydroangeas_fluid");
 		public static final TagKey<Fluid> THERMALILY_FLUID = tag("thermalily_fluid");
 
-
 		private static TagKey<Fluid> tag(String name) {
 			return TagKey.create(Registries.FLUID, prefix(name));
 		}
